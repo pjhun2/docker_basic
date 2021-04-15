@@ -67,11 +67,12 @@ If [ $@ -eq 0 ]; then
  else  
 	/usr/games/cowsay “$@“  
 fi  
-￼
 
 이미지를 만들 땐 docker build  
 -t TAG 레포하고 태그가 t 옵션  
 Playground/cowayimage 이런식으로  
-docker bulid -t playground/cowsayimage ./ // docker에
-docker bulid -t playground/cowsayimage  
-자동으로 FROM apt-get update && 명령어가 실행됨
+docker bulid -t playground/cowsayimage ./ // dockerfile에 구성된 값을 불러와서 playground cowsayimage로 image 생성  
+빌드 생성 시 자동으로 FROM apt-get update && 명령어가 실행됨  
+
+이렇게 만든 이미지를  
+docker run playround/cowsayimage 로 사용가능  
